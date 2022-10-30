@@ -23,6 +23,7 @@ export default function App() {
   // * itself, and the second is a dependency array. (The second argument is not
   // *  necessary. You can not include it if it's not needed.)
 
+  // $ Function to fetch the data.
   const fetchData = () => {
     fetch('https://randomuser.me/api?results=25')
       .then((res) => res.json())
@@ -32,7 +33,8 @@ export default function App() {
         setContacts(data.results);
       });
   };
-  // $ We are fetching our data as the first argument of "useEffect".
+  // $ We are fetching our data by calling the "fetchData()" function with the
+  // $ first argument of the useEffect method.
   useEffect(() => {
     fetchData();
   }, []);
