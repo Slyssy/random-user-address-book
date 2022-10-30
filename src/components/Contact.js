@@ -39,10 +39,16 @@ export default function Character(props) {
             <span className='row__header'>Phone:</span> {props.data.phone}
           </p>
 
-          <button onClick={handleShowDetails}>Hide Details</button>
+          <button className='hide__button' onClick={handleShowDetails}>
+            Hide Details
+          </button>
         </>
       )}
-      {!isExpanded && <button onClick={handleShowDetails}>Show Details</button>}
+      {!isExpanded && (
+        <button className='show__button' onClick={handleShowDetails}>
+          Show Details
+        </button>
+      )}
     </li>
   );
 }

@@ -13,6 +13,13 @@ h1 {
   text-align: center;
 }
 
+figure {
+  width: 80%;
+}
+
+img {
+  width: 100%;
+}
 figcaption {
   font-weight: 700;
   text-align: center;
@@ -46,6 +53,31 @@ figcaption {
   gap: 1em;
 }
 
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(1);
+}
+
+.show__button {
+  background-color: #1d9c1d;
+}
+
+.hide__button {
+  background-color: #c64033;
+}
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .contacts__container {
@@ -58,7 +90,7 @@ figcaption {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .contacts__container {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 4em;
   }
 }
