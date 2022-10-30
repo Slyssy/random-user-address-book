@@ -1,38 +1,64 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400;1,700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Mobile First Styling */
+h1 {
+  font-size: 24px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+figcaption {
+  font-weight: 700;
+  text-align: center;
+  background-color: #222;
+  color: #fff;
+  padding: 0.7em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
+  width: 90%;
+  margin: 1em auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 2em;
 }
 
-.App-link {
-  color: #61dafb;
+.contacts__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.contact {
+  list-style-type: none;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .contacts__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 4em;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .contacts__container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 4em;
   }
 }
